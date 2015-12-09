@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>投资顾问</title>
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/investment.css">
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="nav_con">
+				<div class="logo">
+					<img src="img/logo.png" alt="logo图标">
+				</div>
+				<div class="navbar">
+					<ul>
+						<li><a href="" class="active">首页</a></li>
+						<li><a href="">关于我们</a></li>
+						<li><a href="">加入我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="banner">
+			<div class="banner_con">
+				<ul>
+					<li><a href="index.html">首页&nbsp;</a></li>
+					<li><a href="grade_level.html">&gt;&nbsp;&nbsp;量 . 评级&nbsp;</a></li>
+					<li><a href="##">&gt;&nbsp;&nbsp;投资顾问</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<section class="first">
+			<div class="first_section">
+				<div class="company_info">
+					<ul id="found_info">
+						<li>成立时间</li>
+						<li>所在地区</li>
+						<li>管理模式</li>
+					</ul>
+				</div>
+				<div class="product_info">
+					<div class="manager_info" id="info_con">
+						旗下经理：****
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section class="secound">
+			<div class="secound_section">
+				<ul id="company">
+					<li>投资理念</li>
+					<li>人员介绍</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_con">
+			
+		</div>
+	</footer>
+</body>
+<script>
+window.onload = function() {
+	var xmlhttp = null;
+	var company = document.getElementById("company").getElementsByTagName("li");
+	var found_info = document.getElementById("found_info").getElementsByTagName("li");
+	var url = "http://www.martincao.com/Home/Index/getCompanyInfo?company_id=2";
+	var info_con = document.getElementById("info_con");
+	createHttp();
+	function createHttp () {
+		if(window.XMLHttpRequest) {
+			xmlhttp	= new XMLHttpRequest();
+		} else {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange = function () {
+
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				var data = JSON.parse(xmlhttp.responseText);
+				found_info[0].innerHTML = data[0].company_name;
+				found_info[1].innerHTML = data[0].found_date;
+				found_info[2].innerHTML = data[0].coral_person;
+				info_con.innerHTML = data[0].company_info;
+				company[0].innerHTML = data[0].company_idea;
+				company[1].innerHTML = data[0].company_team;
+			}
+		}
+		xmlhttp.open("GET",url,true);
+		xmlhttp.send();
+	}
+	
+}
+
+</script>
+</html>

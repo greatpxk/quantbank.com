@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品名称</title>
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/product.css">
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+	<script type="text/javascript" src="js/highChartsData.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="nav_con">
+				<div class="logo">
+					<img src="img/logo.png" alt="logo图标">
+				</div>
+				<div class="navbar">
+					<ul>
+						<li><a href="" class="active">首页</a></li>
+						<li><a href="">关于我们</a></li>
+						<li><a href="">加入我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="banner">
+			<div class="banner_con">
+				<ul>
+					<li><a href="index.html">首页&nbsp;</a></li>
+					<li><a href="grade_level.html">&gt;&nbsp;&nbsp;量 . 评级&nbsp;</a></li>
+					<li><a href="##">&gt;&nbsp;&nbsp;产品名称</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<section class="first">
+			<div class="first_section">
+				<div class="tro_info">
+					<h3>产品名称 | 基金类型</h3>
+					<ul>
+						<li class="color_red">净值：***</li>
+						<li class="color_red">总收益：***</li>
+					</ul>
+					<ul>
+						<li>私募公司：***</li>
+						<li>量分数：***</li>
+						<li>年化收益：***</li>
+						<!-- <li>净值：***</li> -->
+						<li>净值日期：***</li>
+						<li>成立日期：***</li>
+					</ul>
+				</div>
+				<div class="line_chart" id="chart_con">
+					<!-- <img src="img/sl1.jpg" alt=""> -->
+				</div>
+			</div>
+		</section>
+		<section class="secound">
+			<div class="secound_section">
+				<table>
+					
+					<thead>
+						<tr>
+							<th class="td_title">指标名称</th>
+							<th class="td_title">收益评级</th>
+							<th class="td_title">风险评级</th>
+							<th class="td_title">近一个月的收益</th>
+							<th class="td_title">近一年收益</th>
+							<th class="td_title">成立以来收益</th>
+							<th class="td_title">夏普比</th>
+							<th class="td_title">最大回撤</th>
+							<th class="td_title">量 . 综合评分</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="tr_info">
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+							<td class="td_info"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_con">
+			
+		</div>
+	</footer>
+		<script>
+		window.onload = function() {
+			var url = "http://www.martincao.com/Home/Index/getFundInfo?fund_id=1";
+
+			function g(id) {
+				return document.getElementById(id);
+			}
+
+			function getData(data) {
+				var tr_info = g("tr_info").getElementsByTagName("td");
+				for(i in data) {
+					tr_info[0].innerHTML = data[i].fund_name;
+					tr_info[1].innerHTML = data[i].yield_level;
+					tr_info[2].innerHTML = data[i].risk_level;
+					tr_info[3].innerHTML = data[i].thismonth_yield;
+					tr_info[4].innerHTML = data[i].thisyear_yield;
+					tr_info[5].innerHTML = data[i].total_yield;
+					tr_info[6].innerHTML = data[i].sharpe;
+					tr_info[7].innerHTML = data[i].maxdrawdown;
+					tr_info[8].innerHTML = data[i].score;
+				}
+			}
+			function createHttp () {
+				if(window.XMLHttpRequest) {
+					xmlhttp	= new XMLHttpRequest();
+				} else {
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function () {
+
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+						var data = JSON.parse(xmlhttp.responseText);
+						getData(data);
+
+					}
+				}
+
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send();
+			}
+
+			createHttp();
+		}
+		</script>
+	   <script>
+		 $(function () {
+		        var names=['hs300','sz50'];
+		        var urls=['http://www.martincao.com/Home/Index/marketValue?type=hs300','http://www.martincao.com/Home/Index/marketValue?type=sz50'];
+		        showChart(urls,names,'#chart_con');
+		    });
+	   </script>
+</body>
+</html>

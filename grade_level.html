@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>量.评级</title>
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/grade_level.css">
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+	<script type="text/javascript" src="js/highChartsData.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="nav_con">
+				<div class="logo">
+					<img src="img/logo.png" alt="logo图标">
+				</div>
+				<div class="navbar">
+					<ul>
+						<li><a href="" class="active">首页</a></li>
+						<li><a href="">关于我们</a></li>
+						<li><a href="">加入我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="banner">
+			<div class="banner_con">
+				<ul>
+					<li><a href="index.html">首页&nbsp;</a></li>
+					<li><a href="##">&gt;&nbsp;&nbsp;量 . 评级&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<section class="first">
+			<div class="first_section">
+				<ul class="secound_nav" id="navbar">
+					<li><a href="javascript:;">管理期货</a></li>
+					<li><a href="javascript:;">套利</a></li>
+					<li><a href="javascript:;">阿尔法</a></li>
+				</ul>
+				<div class="first_info" id="first_section">
+					<div class="info_img">
+						<img src="img/1.jpg" alt="">
+					</div>
+					<div class="info_nav">
+						<ul id="profit">
+							<li><span>{{value}}</span><br/>总收益</li>
+							<li><span>{{thisyear_yield}}</span><br/>今年收益</li>
+							<li><span>10万元</span><br/>投资门槛</li>
+						</ul>
+						<div class="grade_level">
+							量 . 评分：
+							<span id="score">{{score}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="comment">
+					量 . 评论
+				</div>
+				<div class="detail">
+					查看详情
+				</div>
+			</div>
+		</section>
+		<section class="secound">
+			<div class="secound_section">
+				<div class="line_chart" id="chart_con" style="height:300px;">
+				</div>
+			</div>
+		</section>
+		<section class="third">
+			<div class="third_section">
+				<table>
+					<thead>
+						<tr>
+							<th>全部</th>
+							<th>期货管理</th>
+							<th>套利</th>
+							<th>阿尔法</th>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<ul>
+									<li><a href="">排名</a></li>
+									<li><a href="product.html">产品名称</a></li>
+									<li><a href="investment.html">私募公司</a></li>
+									<li><a href="">累计净值</a></li>
+									<li><a href="">净值日期</a></li>
+									<li><a href="">年化收益</a></li>
+<!-- 									<li><a href="">收益评级</a></li>
+									<li><a href="">风险评级</a></li> -->
+									<li><a href="">综合评级</a></li>
+<!-- 									<li><a href="">基金类型</a></li> -->
+									
+								</ul>
+							</td>
+						</tr>
+					</thead>
+					<tbody id="tbody_info">
+						<tr>
+							<td colspan="4">
+								<ul>
+									<li><a href="">{{fund_id}}</a></li>
+									<li><a href="">{{fund_name}}</a></li>
+									<li><a href="">{{company_name}}</a></li>
+									<li><a href="">{{value}}</a></li>
+									<li><a href="">{{value_date}}</a></li>
+									<li><a href="">{{oneyear_yield}}</a></li>
+<!-- 									<li><a href="">力荐</a></li>
+									<li><a href="">谨慎</a></li> -->
+									<li><a href="">{{comment}}</a></li>
+<!-- 									<li><a href="">***</a></li> -->
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<footer>
+			<div class="footer_con">
+				
+			</div>
+		</footer>
+	</div>
+		<script>
+		window.onload = function() {
+			var url = "http://www.martincao.com/Home/Index/topFund?fundType=%E9%98%BF%E5%B0%94%E6%B3%95%E7%AD%96%E7%95%A5&num=10";
+			var chartUrl = "http://www.martincao.com/test.html";
+			var tbody_info = document.getElementById("tbody_info");
+			var first_section = document.getElementById("first_section");
+			var chart_con = document.getElementById("chart_con");
+            var navbar = document.getElementById("navbar").getElementsByTagName("li");
+            // console.log(navbar.length);
+            var profit = document.getElementById("profit").getElementsByTagName("li");
+
+			function getData(data) {
+				var tbody_list = tbody_info.innerHTML
+										.replace(/^\s*/,'')
+						 				.replace(/\s*$/,'');
+ 				var out_tbody = [];
+
+ 				for(i in data) {
+ 					var html_tbody = tbody_list.replace(/{{fund_id}}/g,data[i].fund_id)
+ 											   .replace(/{{fund_name}}/g,data[i].fund_name)
+ 											   .replace(/{{company_name}}/g,data[i].company_name)
+ 											   .replace(/{{value}}/g,data[i].value)
+ 											   .replace(/{{value_date}}/g,data[i].value_date)
+ 											   .replace(/{{oneyear_yield}}/g,data[i].oneyear_yield)
+ 											   .replace(/{{comment}}/g,data[i].comment);
+ 					out_tbody.push(html_tbody);
+
+ 				}
+
+ 				tbody_info.innerHTML = out_tbody.join('');
+
+			}
+
+			createHttp();
+			// getChart();
+
+			function createHttp () {
+				if(window.XMLHttpRequest) {
+					xmlhttp	= new XMLHttpRequest();
+				} else {
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function () {
+
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+						var data = JSON.parse(xmlhttp.responseText);
+						profit[0].innerHTML = data[0].value;
+						profit[1].innerHTML = data[0].thisyear_yield;
+						score.innerHTML = data[0].score;
+						getData(data);
+
+					}
+				}
+
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send();
+			}
+
+			function tabHttp(url) {
+				if(window.XMLHttpRequest) {
+					xmlhttp	= new XMLHttpRequest();
+				} else {
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function () {
+
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						var data = JSON.parse(xmlhttp.responseText);
+						profit[0].innerHTML = data[0].value;
+						profit[1].innerHTML = data[0].thisyear_yield;
+						score.innerHTML = data[0].score;
+					}
+				}
+
+				xmlhttp.open("GET",url,true);
+				xmlhttp.send();
+			}
+
+			for(var i = 0;i<navbar.length;i++) {
+				var url;
+				(function(i) {
+					navbar[i].onclick = function() {
+						switch(i) {
+							case 0:
+								url = "http://www.martincao.com/Home/Index/topFund?fundType=%E9%98%BF%E5%B0%94%E6%B3%95%E7%AD%96%E7%95%A5&num=10"
+								break;
+							case 1:
+								url = "http://www.martincao.com/Home/Index/topFund?fundType=%E5%A5%97%E5%88%A9%E7%AD%96%E7%95%A5&num=10";
+								break;
+							case 2:
+								url = "http://www.martincao.com/Home/Index/topFund?fundType=%E7%A8%8B%E5%BA%8F%E5%8C%96%E6%9C%9F%E8%B4%A7&num=10";
+								break;
+							default:
+								url = "http://www.martincao.com/Home/Index/topFund?fundType=%E5%A5%97%E5%88%A9%E7%AD%96%E7%95%A5&num=10";
+						}
+						tabHttp(url);
+					}
+
+				})(i);
+			}
+
+		}
+
+
+		</script>
+	   <script>
+		 $(function () {
+		        var names=['hs300','sz50'];
+		        var urls=['http://www.martincao.com/Home/Index/marketValue?type=hs300','http://www.martincao.com/Home/Index/marketValue?type=sz50'];
+		        showChart(urls,names,'#chart_con');
+		    });
+	   </script>
+</body>
+</html>

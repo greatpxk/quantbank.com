@@ -1,0 +1,147 @@
+body
+{
+	background-color: #aaa;
+}
+header nav
+{
+	height: 60px;
+	background-color: #14191E;
+}
+
+header nav .nav_con
+{
+	margin: 0 auto;
+	width: 1200px;
+}
+
+header nav .logo
+{
+	float: left;
+	margin-top: 7px;
+}
+
+nav .logo img
+{
+	height: 45px;
+}
+
+header nav .navbar
+{
+	float: right;
+}
+
+nav .navbar li
+{
+	/*margin-right: 35px;*/
+	display: inline-block;
+}
+nav .navbar li a
+{
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 14px;
+	width: 80px;
+	text-align: center;
+}
+
+
+nav .navbar li a:hover,
+nav .navbar li a.active
+{
+	background-color: rgba(255,255,255,.25);
+}
+
+.banner
+{
+	height: 60px;
+	background-color: #eee;
+}
+
+.banner .banner_con
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+.banner_con ul li
+{
+	display: inline-block;
+}
+.banner_con ul li a
+{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	color: #1d1d1d;
+	font-size: 14px;
+}
+
+/*container的样式设置*/
+/*first_section的样式设置*/
+.first
+{
+	background-color: #fff;
+	padding: 60px 0;
+}
+.first_section,
+.secound_section
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.company_info,
+.product_info
+{
+	width: 100%;
+}
+
+.company_info ul li
+{
+	display: inline-block;
+	background-color: #aaa;
+}
+/*.product_info:after
+{
+	content: '';
+	display: block;
+	clear: both;
+}*/
+.product_info>div
+{
+	font-size: 14px;
+	letter-spacing: 1px;
+	width: 100%;
+	background-color: #aaa;
+	margin: 0 10px;
+}
+
+/*secound_section的样式设置*/
+.secound
+{
+	background-color: #eee;
+	padding: 60px 0;
+}
+
+.secound_section ul li
+{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+/*footer的样式设置*/
+footer
+{
+	background-color: #1d1d1d;
+	padding: 60px 0;
+}
+
+.footer_con
+{
+	width: 1200px;
+	margin: 0 auto;
+	height: 100px;
+}

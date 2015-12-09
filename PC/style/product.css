@@ -1,0 +1,175 @@
+body
+{
+	background-color: #aaa;
+}
+header nav
+{
+	height: 60px;
+	background-color: #14191E;
+}
+
+header nav .nav_con
+{
+	margin: 0 auto;
+	width: 1200px;
+}
+/*header nav .nav_con:after
+{
+	display: block;
+	content: '';
+	clear: both;
+}*/
+header nav .logo
+{
+	float: left;
+	margin-top: 7px;
+}
+
+nav .logo img
+{
+	height: 45px;
+}
+
+header nav .navbar
+{
+	float: right;
+}
+
+nav .navbar li
+{
+	/*margin-right: 35px;*/
+	display: inline-block;
+}
+nav .navbar li a
+{
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 14px;
+	width: 80px;
+	text-align: center;
+}
+
+
+nav .navbar li a:hover,
+nav .navbar li a.active
+{
+	background-color: rgba(255,255,255,.25);
+}
+
+.banner
+{
+	height: 60px;
+	background-color: #eee;
+}
+
+.banner .banner_con
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+.banner_con ul li
+{
+	display: inline-block;
+}
+.banner_con ul li a
+{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	color: #1d1d1d;
+	font-size: 14px;
+}
+/* container部分的样式 */
+/* first_section样式 */
+.container
+{
+	background-color: #fff;
+/*	padding: 20px 0;*/
+}
+.first
+{
+	padding: 60px 0;
+}
+.first_section
+{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.tro_info
+{
+	margin-bottom: 35px;
+	width: 100%；
+}
+.tro_info ul li
+{
+	display: inline-block;
+	height: 50px;
+	width: 180px;
+	line-height: 50px;
+	background-color: #84BB26;
+	border-radius: 8px;
+}
+.tro_info ul li.color_red{
+	background-color: #f89679;
+}
+.line_chart
+{
+	width: 100%;
+	height: 400px;
+}
+
+/* secound_section样式 */
+.secound
+{
+	padding: 60px 0;
+	background-color: #eee;
+}
+.secound_section
+{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.secound_section table
+{
+	width: 100%;
+	border-radius: 10px;
+}
+
+.secound_section table th,
+.secound_section table td
+{
+	line-height: 50px;
+	height: 50px;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+	font-size: 15px;
+}
+.secound_section table th
+{
+	background-color: #7CB5EC;
+	color: #fff;
+}
+.secound_section table td
+{
+	background-color: #fff;
+}
+/*footer的样式设置*/
+footer
+{
+	background-color: #1d1d1d;
+	padding: 60px 0;
+}
+
+.footer_con
+{
+	width: 1200px;
+	margin: 0 auto;
+	height: 100px;
+}

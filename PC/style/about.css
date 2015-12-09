@@ -1,0 +1,301 @@
+/*通用样式*/
+.con
+{
+	width: 960px;
+	margin: 0 auto;
+}
+.clearfixed:after
+{
+	display: block;
+	content: '';
+	clear: both;
+}
+.con>p,
+.tro_info p,
+.other_info p,
+.human_info p
+{
+	letter-spacing: 2px;
+	font-size: 14px;
+	color: #1d1d1d;
+}
+
+/*header样式*/
+header nav
+{
+	height: 60px;
+	background-color: #010000;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+header nav .nav_con
+{
+	margin: 0 auto;
+	width: 960px;
+}
+header nav .logo
+{
+	float: left;
+	margin-top: 7px;
+}
+
+header nav .navbar
+{
+	float: right;
+}
+.navbar ul
+{
+	float: right;
+	margin-left: 10px;	
+}
+
+nav .navbar li
+{
+	display: inline-block;
+}
+.menu_nav li a
+{
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 15px;
+	width: 80px;
+	text-align: center;
+}
+
+.menu_nav li a:hover,
+.menu_nav li a.active
+{
+	background-color: rgba(255,255,255,.25);
+}
+.l_active
+{
+	color: #DCA552 !important;
+}
+.banner_nav li
+{
+	display: inline-block;	
+}
+.banner_nav li a
+{
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+}
+
+.banner
+{	
+	padding: 80px 0;
+}
+
+/*container样式*/
+.first_sec
+{
+	background-color: #eee;
+	padding: 60px 0;
+	box-shadow: 1px 0px 1px 0px #aaa;
+}
+.img_info
+{
+	float: left;
+}
+.tro_info
+{
+	float: right;
+	width: 720px;
+}
+.tro_info>span,
+.tro_info>p.job
+{
+	display: block;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+.imgs_info
+{
+	position: relative;
+	height: 600px;
+	width: inherit;
+}
+.imgs_info p
+{
+	font-size: 16px;
+	letter-spacing: 2px;
+	color: #1d1d1d;
+	text-align: center;
+}
+.imgs_info p span
+{
+	color: rgb(204, 159, 105);
+	text-align: center;
+	letter-spacing: 2px;
+}
+.imgs_info>.list_left>span,
+.imgs_info>.list_center>span,
+.imgs_info>.list_right>span
+{
+	display: block;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 16px;
+	color: #1d1d1d;
+}
+.list_left
+{
+	position: absolute;
+	left: 0;
+}
+.list_center
+{
+	position: absolute;
+	left: 50%;
+	margin-left: -80px;
+}
+.list_right
+{
+	position: absolute;
+	right: 0;
+}
+
+.third_sec
+{
+	background-color: #eee;
+	padding: 60px 0;
+	box-shadow: 1px 0px 1px 0px #aaa;
+}
+.other_info
+{
+	margin-bottom:45px
+}
+.human_info
+{
+	position: relative;
+	height: 580px;
+}
+.human_left
+{
+	left: 0;
+	position: absolute;
+	width: 220px;
+}
+.human_center
+{   
+	position: absolute;
+	left: 50%;
+	margin-left: -110px;
+	width: 220px;
+}
+.human_right
+{
+	right: 0;
+	position: absolute;
+	width: 220px;
+}
+.human_info span
+{
+	display: block;
+	margin: 15px auto;
+	font-size: 16px;
+	color: #1d1d1d;
+	letter-spacing: 2px;
+	text-align: center;	
+}
+
+footer .footer_con2
+{
+	background-color: #14191E;
+	padding: 60px 0;
+}
+
+.block
+{
+	width: 960px;
+	margin: 0 auto;
+}
+.info_left
+{
+	float: left;
+}
+
+.footer_con2 ul
+{
+	float: left;
+}
+.info_left ul li
+{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	color: #e7c8a3;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.info_right ul li
+{
+	height: 80px;
+	line-height:80px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	color: #e7c8a3;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.info_right
+{
+	float: right;
+}
+
+.cooperation
+{
+	width: 960px;
+	margin-top: 35px;
+}
+
+.cooperation ul li
+{
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+}
+.footer_con3
+{
+	padding: 25px 0;
+	background-color:  #14191E;
+	border-top: 1px solid #e7c8a3;;
+}
+.footer_con3 .company_info
+{
+	height: 60px;
+}
+.company_logo
+{
+	float: left;
+}
+.company_logo img
+{
+	height: 60px;
+}
+.company_no
+{
+	float: right;
+}
+
+.company_no p
+{
+	color: #e7c8a3;
+	line-height: 20px;
+	font-size: 14px;
+	/*letter-spacing: 2px;*/
+	text-align: center;
+	margin-top: 20px;
+}
