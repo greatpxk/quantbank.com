@@ -87,7 +87,7 @@
 	</header>
 	<div class="vedio_con" id="vedio_con" style="display:none;">
 		<video src="/PC/video/video.mp4" width="800px" controls="controls" loop="loop" class="" id="myvideo">
-				<source src="/PC/video/video.mp4" type="video/mp4">
+				<source id="video_source" src="/PC/video/video.mp4" type="video/mp4">
 		</video>
 		<div class="close_btn" id="close_btn">
 			<a href="##">
@@ -266,7 +266,7 @@
 							<input type="text" placeholder="Please type the text" style="width:140px;">
 						</td>
 						<td>
-							<img src="/verify" style="height:40px;" alt="验证码" onclick="this.src='/verify'+'?'+Math.random()">
+							<img id="code" src="/verify" style="height:40px;" alt="验证码" onclick="this.src='/verify'+'?'+Math.random()">
 						</td>
 					</tr>
 				</tbody>
@@ -293,10 +293,13 @@
 		var register_btn = document.getElementById("register_btn");
 		var register_con = document.getElementById("register");
 		var rg_close = document.getElementById("rg_close");
+		var code_img = document.getElementById("code");
+		var video_source = document.getElementById("video_source");
 		var condition = true;
 
 		register_btn.onclick = function() {
 			register_con.style.display = "block";
+			code_img.src = '/verify'+'?'+Math.random();
 		}
 
 		rg_close.onclick = function() {
@@ -318,6 +321,8 @@
 			}
 			condition = true;
 		}
+		myvideo.src = "/PC/video/video.mp4";
+		video_source.src="/PC/video/video.mp4";
 	}
 </script>
 </html>
