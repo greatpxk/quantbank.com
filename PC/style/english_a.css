@@ -1,4 +1,8 @@
 /*通用样式*/
+body
+{
+	font-family: '微软雅黑';
+}
 .con
 {
 	width: 960px;

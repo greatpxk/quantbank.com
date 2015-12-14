@@ -1,4 +1,7 @@
-
+body
+{
+	font-family: '微软雅黑';
+}
 header nav
 {
 	height: 60px;
