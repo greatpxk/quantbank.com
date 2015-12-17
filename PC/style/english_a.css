@@ -19,9 +19,9 @@ body
 .other_info p,
 .human_info p
 {
-	letter-spacing: 1px;
 	font-size: 14px;
 	color: #1d1d1d;
+	line-height: 30px;
 }
 
 /*header样式*/
@@ -148,9 +148,10 @@ nav .navbar li
 {
 	display: block;
 	text-align: center;
-	letter-spacing: 2px;
+	/*letter-spacing: 2px;*/
 	font-size: 16px;
 	color: #1d1d1d;
+	line-height: 22px;
 }
 .list_left
 {
@@ -182,7 +183,7 @@ nav .navbar li
 .human_info
 {
 	position: relative;
-	height: 700px;
+	height: 960px;
 }
 .human_left
 {
@@ -242,7 +243,6 @@ footer .footer_con2
 	margin-right: 10px;
 	color: #e7c8a3;
 	font-size: 14px;
-	letter-spacing: 1px;
 }
 .info_right ul li
 {

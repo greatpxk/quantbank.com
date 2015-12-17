@@ -291,7 +291,7 @@ nav .navbar li
 	height: 120px;
 	line-height: 120px;
 	font-size: 14px;
-	letter-spacing: 2px;	
+	letter-spacing: 1px;	
 }
 .li_sec
 {
@@ -386,7 +386,7 @@ footer .footer_con2
 	margin-right: 10px;
 	color: #e7c8a3;
 	font-size: 14px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 .info_right ul li
 {

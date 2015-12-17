@@ -261,13 +261,14 @@ nav .navbar li
 }
 .li_width p
 {
-	margin-top: 45px;
+	margin-top: 43px;
+	line-height: 22px;
 }
 .secound ul li
 {
 	font-size: 14px;
 	margin-top: 70px;
-	letter-spacing: 1px;
+	line-height: 22px;
 	color: #1d1d1d;
 }
 .secound ul li span
@@ -275,7 +276,7 @@ nav .navbar li
 	display: block;
 	height: 50px;
 	line-height: 50px;
-	width: 160px;
+	width: 180px;
 	background-color: #454545;
 	border: 5px solid #7C7C7C;
 	border-radius: 10px;
@@ -312,7 +313,7 @@ nav .navbar li
 	height: 120px;
 	/*line-height: 120px;*/
 	font-size: 14px;
-	letter-spacing: 1px;	
+/*	letter-spacing: 1px;*/	
 }
 .li_sec
 {
@@ -326,9 +327,10 @@ nav .navbar li
 .li_sec span
 {
 	display: block;
-	margin-top: 42px;
+	margin-top: 38px;
 	color: #FFF09B;
 	/*position: absolute;*/
+	line-height: 22px;
 }
 div.clearfixed:after
 {
@@ -369,7 +371,7 @@ div.clearfixed:after
 	padding: 20px;
 	line-height: 22px;
 	background-color: #7c7c7c;
-	letter-spacing: 1px;
+	/*letter-spacing: 1px;*/
 	color: #fff;
 	border-radius: 10px;
 	font-size: 14px;
@@ -379,7 +381,7 @@ div.clearfixed:after
 	display: block;
 	text-align: center;
 	font-size: 22px;
-	letter-spacing: 1px;
+	/*letter-spacing: 1px;*/
 	color: #fff09b;
 	margin-bottom: 45px;
 }
@@ -413,7 +415,7 @@ footer .footer_con2
 	margin-right: 10px;
 	color: #e7c8a3;
 	font-size: 14px;
-	letter-spacing: 1px;
+	/*letter-spacing: 1px;*/
 }
 .info_right ul li
 {
@@ -423,7 +425,7 @@ footer .footer_con2
 	margin-left: 10px;
 	color: #e7c8a3;
 	font-size: 14px;
-	letter-spacing: 2px;
+	/*letter-spacing: 2px;*/
 }
 .info_right
 {

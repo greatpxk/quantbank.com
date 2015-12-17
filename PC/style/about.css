@@ -19,9 +19,10 @@ body
 .other_info p,
 .human_info p
 {
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-size: 14px;
-	color: #1d1d1d;
+	color: #1D1D1D;
+	line-height: 30px;
 }
 
 /*headerÑùÊ½*/
@@ -132,15 +133,16 @@ nav .navbar li
 .imgs_info p
 {
 	font-size: 16px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	color: #1d1d1d;
 	text-align: center;
+	line-height: 22px;
 }
 .imgs_info p span
 {
 	color: rgb(204, 159, 105);
 	text-align: center;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 .imgs_info>.list_left>span,
 .imgs_info>.list_center>span,
@@ -148,7 +150,7 @@ nav .navbar li
 {
 	display: block;
 	text-align: center;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-size: 16px;
 	color: #1d1d1d;
 }
@@ -182,7 +184,7 @@ nav .navbar li
 .human_info
 {
 	position: relative;
-	height: 580px;
+	height: 660px;
 }
 .human_left
 {
@@ -209,7 +211,7 @@ nav .navbar li
 	margin: 15px auto;
 	font-size: 16px;
 	color: #1d1d1d;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	text-align: center;	
 }
 
@@ -242,7 +244,7 @@ footer .footer_con2
 	margin-right: 10px;
 	color: #e7c8a3;
 	font-size: 14px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 .info_right ul li
 {
@@ -252,7 +254,7 @@ footer .footer_con2
 	margin-left: 10px;
 	color: #e7c8a3;
 	font-size: 14px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 .info_right
 {
