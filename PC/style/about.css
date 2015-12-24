@@ -1,7 +1,7 @@
-/*通用样式*/
+/*閫氱敤鏍峰紡*/
 body
 {
-	font-family: '微软雅黑';
+	font-family: '寰蒋闆呴粦';
 }
 .con
 {
@@ -25,7 +25,7 @@ body
 	line-height: 30px;
 }
 
-/*header样式*/
+/*header鏍峰紡*/
 header nav
 {
 	height: 60px;
@@ -99,7 +99,7 @@ nav .navbar li
 	padding: 80px 0;
 }
 
-/*container样式*/
+/*container鏍峰紡*/
 .first_sec
 {
 	background-color: #eee;
