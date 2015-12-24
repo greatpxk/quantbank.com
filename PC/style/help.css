@@ -1,0 +1,226 @@
+/*通用样式*/
+body
+{
+	font-family: '微软雅黑';
+}
+.con
+{
+	width: 960px;
+	margin: 0 auto;
+}
+.clearfixed:after
+{
+	display: block;
+	content: '';
+	clear: both;
+}
+.con>p,
+.tro_info p,
+.other_info p,
+.human_info p
+{
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: #1D1D1D;
+	line-height: 30px;
+}
+
+/*header样式*/
+header nav
+{
+	height: 60px;
+	background-color: #010000;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+header nav .nav_con
+{
+	margin: 0 auto;
+	width: 960px;
+}
+header nav .logo
+{
+	float: left;
+	margin-top: 7px;
+}
+
+header nav .navbar
+{
+	float: right;
+}
+.navbar ul
+{
+	float: right;
+	margin-left: 10px;	
+}
+
+nav .navbar li
+{
+	display: inline-block;
+}
+.menu_nav li a
+{
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 15px;
+	width: 80px;
+	text-align: center;
+}
+
+.menu_nav li a:hover,
+.menu_nav li a.active
+{
+	background-color: rgba(255,255,255,.25);
+}
+.l_active
+{
+	color: #DCA552 !important;
+}
+.banner_nav li
+{
+	display: inline-block;	
+}
+.banner_nav li a
+{
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+}
+
+/*container样式*/
+.container
+{
+	background-color: #eee;
+	padding: 60px 0;
+}
+.info_con
+{
+	width: 960px;
+	background-color: #fff;
+	padding: 35px 60px;
+	box-shadow: 5px 5px 10px #968E8E;
+}
+.info_con h1
+{
+	font-weight: 500;
+	border-bottom: 1px dashed #1d1d1d;
+	padding-bottom: 25px;
+	margin: 0;
+	font-size: 28px;
+}
+.info_con h2
+{
+	font-weight: 500;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+.info_con p
+{
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 1px;
+	text-indent: 2em;
+	color: #454545;
+}
+.info_con div
+{
+	margin-top: 35px;
+}
+/*footer样式*/
+footer .footer_con2
+{
+	background-color: #14191E;
+	padding: 60px 0;
+}
+
+.block
+{
+	width: 960px;
+	margin: 0 auto;
+}
+.info_left
+{
+	float: left;
+}
+
+.footer_con2 ul
+{
+	float: left;
+}
+.info_left ul li
+{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	color: #e7c8a3;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.info_right ul li
+{
+	height: 80px;
+	line-height:80px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	color: #e7c8a3;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.info_right
+{
+	float: right;
+}
+
+.cooperation
+{
+	width: 960px;
+	margin-top: 35px;
+}
+
+.cooperation ul li
+{
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+}
+.footer_con3
+{
+	padding: 25px 0;
+	background-color:  #14191E;
+	border-top: 1px solid #e7c8a3;;
+}
+.footer_con3 .company_info
+{
+	height: 60px;
+}
+.company_logo
+{
+	float: left;
+}
+.company_logo img
+{
+	height: 60px;
+}
+.company_no
+{
+	float: right;
+}
+
+.company_no p
+{
+	color: #e7c8a3;
+	line-height: 20px;
+	font-size: 14px;
+	/*letter-spacing: 2px;*/
+	text-align: center;
+	margin-top: 20px;
+}
